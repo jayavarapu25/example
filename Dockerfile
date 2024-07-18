@@ -1,5 +1,8 @@
-FROM tomcat:8.0.20-jre8
-MAINTAINER Gayathri
+FROM openjdk:17
+MAINTAINER "Nageswara"
+COPY target/spring-boot1-0.0.1-SNAPSHOT.jar  /usr/app/
+WORKDIR /usr/app/
 EXPOSE 8080
-COPY target/spring-boot1-0.0.1-SNAPSHOT.jar/ /usr/local/app/spring-boot1-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "spring-boot1-0.0.1-SNAPSHOT.jar"]
+
 
