@@ -1,4 +1,5 @@
-FROM tomcat:8.0.20-jre8
+FROM openjdk:8-jre
 MAINTAINER Gayathri
 EXPOSE 8080
-COPY target/spring-boot1.war /us/local/tomcat/webapps/spring-boot1.war
+COPY C:\ProgramData\Jenkins\.jenkins\workspace\Testing\target\spring-boot1-0.0.1-SNAPSHOT.jar /usr/local/app/spring-boot1-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "/usr/local/app/spring-boot1-0.0.1-SNAPSHOT.jar"]
